@@ -7,9 +7,37 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        $(function() {
+
+            $("#Education , #Work , #Brief").hide();
+            
+            $("#btnProfile").click(function(){
+                $("#Profile").show();
+                $("#Education , #Work , #Brief").hide();
+            });
+            
+            $("#btnEducation").click(function(){
+                $("#Education").show();
+                $("#Work , #Profile , #Brief").hide();
+            });
+            
+            $("#btnWork").click(function(){
+                $("#Work").show();
+                $("#Education , #Profile , #Brief").hide();
+            });
+            
+            $("#btnBrief").click(function(){
+                $("#Brief").show();
+                $("#Education , #Work , #Profile").hide();
+            });
+            
+        });
+    </script>
 
     <title>About Me</title>
 
@@ -18,39 +46,34 @@
 <body>
 
     <header class="container sticky-top">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <ul class="navbar-nav">
+       <hr>
+        <nav>
+            <ul class="nav nav-pills nav-fill">
                 <li class="nav-item">
-                    <a href="#profile" class="nav-link">
-                        Profile
-                    </a>
+                    <button id="btnProfile" type="button" class="btn btn-outline-success">Profile</button>
                 </li>
                 <li class="nav-item">
-                    <a href="#education" class="nav-link">
-                        Education
-                    </a>
+                    <button id="btnEducation" type="button" class="btn btn-outline-success">Education</button>
                 </li>
                 <li class="nav-item">
-                    <a href="#working" class="nav-link">
-                        Work Experience
-                    </a>
+                    <button id="btnWork" type="button" class="btn btn-outline-success">Work Experience</button>
                 </li>
                 <li class="nav-item">
-                    <a href="#award" class="nav-link">
-                        Award
-                    </a>
+                    <button id="btnAward" type="button" class="btn btn-outline-success">Award</button>
                 </li>
                 <li class="nav-item">
-                    <a href="#vision" class="nav-link">
-                        Vision
-                    </a>
+                    <button id="btnBrief" type="button" class="btn btn-outline-success">Brief</button>
+                </li>
+                <li class="nav-item">
+                    <button id="btnVision" type="button" class="btn btn-outline-success">Vision</button>
                 </li>
             </ul>
         </nav>
+        <hr>
     </header>
-
-
-    <div class="container">
+    
+   
+    <div id="Profile" class="container border border-secondary rounded">
         <h3>Profile</h3>
         <div class="row">
             <div class="col-md"><img src="0955204215.jpg" alt="image" class="image-fluid" style="width:100%"></div>
@@ -60,7 +83,7 @@
                         <tr>
                             <td>Name</td>
                             <td>Lovius Tey</td>
-    
+
                         </tr>
                         <tr>
                             <td>Gender</td>
@@ -103,9 +126,7 @@
 
     </div>
 
-    <br>
-
-    <div class="container">
+    <div id="Education" class="container">
         <h2>Education</h2>
         <table class="table table-bordered">
             <thead>
@@ -129,9 +150,7 @@
         </table>
     </div>
 
-    <br>
-
-    <div class="container">
+    <div id="Work" class="container">
         <h2>Work Experience</h2>
         <table class="table table-bordered">
             <thead>
@@ -155,6 +174,14 @@
         </table>
     </div>
 
+    <div id="Brief" class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Brief</h1>
+                <p class="lead">I am Lovius Tey.I come from Johor. I stayed in the Taiwan for 11 years . I had the experience about java web-site programmer 2 and half years.In my past working , except coding program , I communicated with the client , our dicussion content had client requirement and system bug. During my past working, I used the jquery, sql, ireport , spring , sturts2,vue.js , rtc ,git and bootstrap4 to finish my job. During my pursue Master's degree , I participated the internship in an insuance agent company and served as a teacher assistant. During my past working exprience , I exhibited responsible and positive. I have the difficent of the English communication , it is my main problem by now,but I have been trying to get over it. I have confidence to defeat it. Above is my brief,thanks for your listening.</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 
