@@ -14,28 +14,33 @@
     <script>
         $(function() {
 
-            $("#Education , #Work , #Brief").hide();
-            
-            $("#btnProfile").click(function(){
+            $("#Education , #Work , #Brief , #Vision").hide();
+
+            $("#btnProfile").click(function() {
                 $("#Profile").show();
-                $("#Education , #Work , #Brief").hide();
+                $("#Education , #Work , #Brief , #Vision").hide();
             });
-            
-            $("#btnEducation").click(function(){
+
+            $("#btnEducation").click(function() {
                 $("#Education").show();
-                $("#Work , #Profile , #Brief").hide();
+                $("#Work , #Profile , #Brief , #Vision").hide();
             });
-            
-            $("#btnWork").click(function(){
+
+            $("#btnWork").click(function() {
                 $("#Work").show();
-                $("#Education , #Profile , #Brief").hide();
+                $("#Education , #Profile , #Brief , #Vision").hide();
             });
-            
-            $("#btnBrief").click(function(){
+
+            $("#btnBrief").click(function() {
                 $("#Brief").show();
-                $("#Education , #Work , #Profile").hide();
+                $("#Education , #Work , #Profile , #Vision").hide();
             });
             
+             $("#btnVision").click(function() {
+                $("#Vision").show();
+                $("#Education , #Work , #Profile , #Brief").hide();
+            });
+
         });
     </script>
 
@@ -45,8 +50,8 @@
 
 <body>
 
-    <header class="container sticky-top">
-       <hr>
+    <header class="container sticky-top" style="background-color:azure">
+        <hr>
         <nav>
             <ul class="nav nav-pills nav-fill">
                 <li class="nav-item">
@@ -71,8 +76,8 @@
         </nav>
         <hr>
     </header>
-    
-   
+
+
     <div id="Profile" class="container border border-secondary rounded">
         <h3>Profile</h3>
         <div class="row">
@@ -154,7 +159,7 @@
         <h2>Work Experience</h2>
         <table class="table table-bordered">
             <thead>
-                <th>Position</th>
+                <th>Job Title</th>
                 <th>Company Name</th>
                 <th>Tenure</th>
             </thead>
@@ -182,6 +187,16 @@
             </div>
         </div>
     </div>
+
+    <div id="Vision" class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Vision</h1>
+                <p class="lead">After five years , I wish I able to become a teamleader , I will lead the team to contribute the benefit to company , and develop technical and manage skill . And after ten years , I hope I can become a manager , my duty is fight the benefit for company and take care my subordinate.</p>
+            </div>
+        </div>
+    </div>
+
 
 </body>
 
