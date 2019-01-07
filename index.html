@@ -16,31 +16,36 @@
     <script>
         $(function() {
 
-            $("#Education , #Work , #Brief , #Vision").hide();
+            $("#Education , #Work , #Brief , #Vision , #Award").hide();
 
             $("#btnProfile").click(function() {
                 $("#Profile").show();
-                $("#Education , #Work , #Brief , #Vision").hide();
+                $("#Education , #Work , #Brief , #Vision , #Award").hide();
             });
 
             $("#btnEducation").click(function() {
                 $("#Education").show();
-                $("#Work , #Profile , #Brief , #Vision").hide();
+                $("#Work , #Profile , #Brief , #Vision , #Award").hide();
             });
 
             $("#btnWork").click(function() {
                 $("#Work").show();
-                $("#Education , #Profile , #Brief , #Vision").hide();
+                $("#Education , #Profile , #Brief , #Vision , #Award").hide();
             });
 
             $("#btnBrief").click(function() {
                 $("#Brief").show();
-                $("#Education , #Work , #Profile , #Vision").hide();
+                $("#Education , #Work , #Profile , #Vision , #Award").hide();
             });
 
             $("#btnVision").click(function() {
                 $("#Vision").show();
-                $("#Education , #Work , #Profile , #Brief").hide();
+                $("#Education , #Work , #Profile , #Brief , #Award").hide();
+            });
+
+            $("#btnAward").click(function() {
+                $("#Award").show();
+                $("#Education , #Work , #Profile , #Brief , #Vision").hide();
             });
 
         });
@@ -79,6 +84,55 @@
         <hr>
     </header>
 
+    <div id="Award" class="container">
+       
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+           <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+            <li data-target="#demo" data-slide-to="4"></li>
+            <li data-target="#demo" data-slide-to="5"></li>
+          </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="competition.jpg" alt="competition.jpg"  class="img-thumbnail img-fluid" >
+                </div>
+                <div class="carousel-item">
+                    <img src="bachelor.jpg" alt="bachelor"  class="img-thumbnail img-fluid" >
+                </div>
+                <div class="carousel-item">
+                    <img src="masterDegree.jpg" alt="masterDegree"  class="img-thumbnail img-fluid" >
+                </div>
+                 <div class="carousel-item">
+                    <img src="shoolReport.jpg" alt="shoolReport"  class="img-thumbnail img-fluid" >
+                </div>
+                 <div class="carousel-item">
+                    <img src="teachingAssistant.jpg" alt="teachingAssistant"  class="img-thumbnail img-fluid" >
+                </div>
+                 <div class="carousel-item">
+                    <img src="teachingAssistantAward.jpg" alt="teachingAssistantAward"  class="img-thumbnail img-fluid" >
+                </div>
+            </div>
+
+            
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+
+        </div>
+
+
+
+    </div>
 
     <div id="Profile" class="container border border-secondary rounded">
         <h3>Profile</h3>
@@ -237,7 +291,7 @@
             <div class="container">
                 <h1 class="display-4">Brief</h1>
                 <p class="lead">
-                    I am Lovius Tey.<br> I come from Johor. <br> I stayed in Taiwan for 11 years. <br> I graduated from Tamkang University at Taiwan. <br> My major is Information Management. <br> I had the experience about java web-site programmer 2 and half years at Taiwan. <br> In my past working experience, I communicated with the client and wrote the guide, except coding. <br> Our discussion content included client requirement and system bug. <br> I had used the Jquery, Sql, Ireport ,Spring ,Sturts2 ,Vue.js ,RTC ,git and bootstrap4 to finish my job. <br> During my perusal Master's degree, I participated the internship in an insurance agent company and served as a teacher assistant in my university. <br> During my past working experience, I exhibited responsible and positive in job. <br> I have the difficult in English communication, it is my main problem by now, but I have been trying to get over it. <br> I have confidence to overcome it.
+                    I am Tey Haw Zhe , English's nickname is Lovius Tey.<br> I come from Johor,Tangkak. <br> I lived in Taiwan for 11 years.<br> I graduated from Tamkang University at Taiwan.<br> My major is Information Management.<br> I had the experience about java web-site programmer two and half years at Taiwan.<br> In my past working experience, I communicated with the client , wrote the guide,and coding.<br> Our discussion content regarding client requirement and system bug. <br> At the past,I had used the Jquery, Sql, Ireport ,Spring ,Sturts2 ,Vue.js ,RTC ,git and bootstrap4 to complete my job. <br> During my perusal Master's degree, I participated the internship in an insurance agent company and served as a teaching assistant in my university. <br> During my past working experience, I exhibited responsible and positive in job. <br> I have the crisis in English communication, it is my main problem by now, but I have been trying to get over it. <br> I have confidence to overcome it.
                 </p>
             </div>
         </div>
@@ -247,7 +301,9 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4">Vision</h1>
-                <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;After five years , I wish I will able to become a team leader , I will lead the team to contribute benefit to company , and develop technical and manage skill . And after ten years, I hope I will become a manager, my duty is fighting the benefit for company and take care my subordinates.</p>
+                <p class="lead">
+                    I will become a team leader within 5 years. <br> I will lead my team to develop more technical and management skills for fighting more benefits for the company. <br> Besides, I will become manager and take care my subordinates.
+                </p>
             </div>
         </div>
     </div>
